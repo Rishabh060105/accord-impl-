@@ -8,8 +8,10 @@
   "scripts": {
     "build": "tsc",
     "test": "node --loader ts-node/esm src/tests/runner.ts",
+    "test:agentic": "node --loader ts-node/esm src/tests/agenticRunner.ts",
     "test:compiled": "node dist/tests/runner.js",
     "demo": "node --loader ts-node/esm src/demo.ts",
+    "agentic": "node --loader ts-node/esm src/cli/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

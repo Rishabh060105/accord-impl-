@@ -41,3 +41,47 @@ export type { ValidationResult } from "./validation/validator.js";
 // Generation
 export { generateArtifacts, generateModelCto, generateGrammarTemMd, generateLogicErgo } from "./generation/generator.js";
 export type { GeneratedArtifacts } from "./generation/generator.js";
+
+// Agentic workflow layer
+export {
+  createWorkflowContext,
+  getActiveIR,
+  addStageTrace,
+  addRepairRecord,
+} from "./workflow/context.js";
+export type {
+  WorkflowContext,
+  WorkflowStage,
+  WorkflowStatus,
+  StageTrace,
+  RepairRecord,
+} from "./workflow/context.js";
+
+export { SPECIALIST_AGENTS, getSpecialistAgent } from "./agents/definitions.js";
+export type { SpecialistAgentDefinition } from "./agents/definitions.js";
+export {
+  AgenticWorkflowOrchestrator,
+  createFailedWorkflowResult,
+} from "./workflow/orchestrator.js";
+export type {
+  AgenticWorkflowOptions,
+  AgenticWorkflowResult,
+} from "./workflow/orchestrator.js";
+
+export {
+  identifyContractTypeWithProvider,
+  extractIRWithProvider,
+  repairIRWithProvider,
+} from "./tools/providerTool.js";
+export { loadContractType, loadKnownContractTypes } from "./tools/registryTool.js";
+export {
+  validateIntermediateRepresentation,
+  validateSchemaForIR,
+  validateTemplateForIR,
+} from "./tools/validationTool.js";
+export {
+  generateAccordArtifacts,
+  generateConcertoModel,
+  generateTemplateGrammar,
+  generateErgoLogic,
+} from "./tools/generationTool.js";
