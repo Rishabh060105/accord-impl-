@@ -363,3 +363,12 @@ That means:
 - ambiguity is surfaced instead of hidden
 
 That architecture is a strong fit for the Accord Project because Accord templates are fundamentally structured, typed, and executable artifacts.
+
+## Future Work
+
+- add more contract types to the registry for broader legal coverage
+- support richer IR structures such as nested clauses, milestones, and multi-party agreements
+- strengthen validation with deeper cross-field and legal-consistency checks
+- generate more complete Accord packages with stronger Ergo logic and export-ready outputs
+- expand provider benchmarking and evaluation across Groq, OpenAI, Anthropic, and future LLM backends
+- improve Playground integration with IR inspection, ambiguity review, and human-in-the-loop editing
