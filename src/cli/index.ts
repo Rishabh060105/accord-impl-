@@ -36,6 +36,21 @@ async function main(): Promise<void> {
   }
 
   const provider = buildProvider(parsed.provider, parsed.model);
+  
+  if (parsed.provider.toLowerCase() === "mock") {
+    console.log("\n------------------------------------------------------------");
+    console.log("WARNING: Using the 'mock' provider.");
+    console.log("This returns STATIC sample data for demonstration purposes.");
+    console.log("It will NOT process your actual natural language requirements.");
+    
+    if (process.env.GROQ_API_KEY) {
+      console.log("TIP: We detected a GROQ_API_KEY. Use '--provider groq' for real LLM drafting.");
+    } else if (process.env.OPENAI_API_KEY) {
+      console.log("TIP: We detected an OPENAI_API_KEY. Use '--provider openai' for real LLM drafting.");
+    }
+    console.log("------------------------------------------------------------\n");
+  }
+
   const orchestrator = new AgenticWorkflowOrchestrator(provider, {
     forceContractType: parsed.forceContractType,
     maxRepairPasses: parsed.maxRepairs,

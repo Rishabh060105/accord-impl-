@@ -196,8 +196,29 @@ npm run demo
 The repository now also exposes an agentic workflow CLI over the same drafting core:
 
 ```bash
-npm run agentic -- "Draft a service agreement between DevCo and ClientCorp" --provider mock
+npm run agentic -- "Draft a service agreement between DevCo and ClientCorp" --provider groq
 ```
+
+Artifacts will be automatically saved to a `./generated` directory.
+
+#### Provider Selection
+
+The CLI defaults to a `mock` provider if no other option is specified. 
+
+> [!WARNING]
+> The **mock** provider uses static sample data and **will not** process your specific natural language requirements. It is intended only for testing the CLI infrastructure.
+
+To use real LLM-powered drafting, specify a provider with the `--provider` or `-p` flag:
+
+```bash
+# Using Groq (Fastest)
+npm run agentic -- "Draft a service agreement..." --provider groq
+
+# Using OpenAI
+npm run agentic -- "Draft a service agreement..." --provider openai
+```
+
+Ensure the corresponding API key is set in your `.env` file (`GROQ_API_KEY`, `OPENAI_API_KEY`, or `ANTHROPIC_API_KEY`).
 
 Options include:
 
