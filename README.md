@@ -34,7 +34,7 @@ This ensures:
 
 ## Agentic Workflow Extension
 
-This repository now also includes an **agentic orchestration layer** built on top of the existing drafting pipeline. Rather than replacing the deterministic core, the new workflow adds named specialist stages that mirror the real drafting lifecycle:
+This repository includes an **agentic orchestration layer** built on top of the existing drafting pipeline. The agents were developed and analyzed using **CrewAI orchestration**, ensuring each specialist stage is explicitly modeled and traceable. Rather than replacing the deterministic core, the new workflow adds named specialist stages that mirror the real drafting lifecycle:
 
 1. Requirements analysis
 2. Contract type classification
